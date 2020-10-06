@@ -23,6 +23,8 @@ import {AbiItem} from 'web3-utils';
 
 // TODO: Add generic type!
 export class Contract {
+    static setProvider(provider: provider): void;
+
     constructor(
         jsonInterface: AbiItem[],
         address?: string,
@@ -46,6 +48,8 @@ export class Contract {
     clone(): Contract;
 
     deploy(options: DeployOptions): ContractSendMethod;
+
+    setProvider(provider: provider): void;
 
     methods: any;
 
